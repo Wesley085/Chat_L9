@@ -1,0 +1,404 @@
+{
+	"info": {
+		"_postman_id": "c7af2ed3-5d6e-4d33-903d-ffbe479a2251",
+		"name": "ChatBackend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37430900"
+	},
+	"item": [
+		{
+			"name": "SendMessage",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Bora testar o delete e img",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "apagar",
+							"type": "text"
+						},
+						{
+							"key": "to",
+							"value": "wesleysantos103094@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "to",
+							"value": "wesleysantos103094@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "media",
+							"type": "file",
+							"src": "/C:/Users/wesle/OneDrive/Imagens/doce/logo_doces.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/SendMessage",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"SendMessage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteMessage",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{url}}/api/messages/(id-da-mensagem)",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"messages",
+						"(id-da-mensagem)"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch_messgae",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "bababui",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Wesley",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "wesleysantos103094@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "bababui",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createChat",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{url}}/api/createChat",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"createChat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "load",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "chat_id",
+							"value": "50",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/load?chat_id=1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"load"
+					],
+					"query": [
+						{
+							"key": "chat_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loadWith Scrolling",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/messages/load",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"messages",
+						"load"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "load2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/load?other=w@gmail.com",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"load"
+					],
+					"query": [
+						{
+							"key": "other",
+							"value": "w@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "localhost:8000"
+		},
+		{
+			"key": "token",
+			"value": "16|NhRzIC8VYHSVtw4zqf90cU3jkHvU8pA6Ralf7CUx11a331b6"
+		}
+	]
+}
