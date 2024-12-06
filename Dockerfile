@@ -12,7 +12,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Configurações do Laravel
 WORKDIR /var/www
 COPY . /var/www
-RUN composer install && chmod -R 777 storage bootstrap/cache && php artisan migrate
+RUN composer install && chmod -R 777 storage bootstrap/cache 
 
 EXPOSE 9000
 CMD ["php-fpm"]
